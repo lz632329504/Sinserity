@@ -1,0 +1,34 @@
+<!--pages/shopCart/shopCart.wxml-->
+<!--<view class='contain'>
+  <view class='ishave'>
+    <image src='../images/gouwuche-k.png'></image>
+    <text class='no-txt'>购物车还是空的</text>
+    <button class='no-but'>到诚信商城逛逛</button>
+  </view>
+</view>-->
+<view class="empty_tip " wx:if="{{list!=null}}">
+
+  <scroll-view scroll-y="true" style="height:100%;">
+    <block wx:for="{{list}}" wx:key="">
+      <view class='guclist' data-id="{{item.id}}" bindlongtap="deletedd">
+        <view class='bord' data-id='{{index}}' bindtap='xuanze' ><icon wx:if="{{item.isxz!=false}}" type='success' color='red'></icon></view>
+        <image class='zt' src='{{comUrl}}{{item.imgsrc}}'></image>
+        <view class='title'>{{item.comname}} {{item.yanse}}</view>
+        <view class='nowright'>{{item.num}} x <text style='color:red;'>{{item.price}}</text></view>
+      </view>
+    </block>
+  </scroll-view>
+
+  <view class='bottm'>
+    <view class='bord' bindtap='allxuan'><icon wx:if="{{isallxuan}}" type='success' color='red'></icon></view>
+    <view class='bottom-txt'>全选</view>
+    <view class='hecheng ju' bindtap='gouser'>结算({{allnum}})</view>
+    <view class='nowright2'>合计：<text style='color:red;'>{{allprice}}元</text></view>
+  </view>
+</view>
+<view class="empty_tip " wx:if="{{list==null}}">
+  <image class='gous' src="{{imgUrl}}gouwuche-k.png" mode="widthFix"></image>
+  <text class='no-txt'>购物车还是空的</text>
+  <button class='no-but' bindtap='goSC'>到诚信商城逛逛</button>
+</view>
+

@@ -1,0 +1,32 @@
+<!--pages/myorder/myorder.wxml-->
+<view class='black'></view>
+<view class='contain' wx:if="{{ddlist!=null}}">
+  <!--<text class='time'>2018年</text>-->
+
+  <block wx:for="{{ddlist}}" wx:key="">
+    <view class='my-info' data-id="{{item.id}}" bindtap='goinfo'>
+      <image src='{{comUrl}}{{item.imgsrc}}'></image>
+      <view class='txt-zu'>
+        <text class='zu-tit'>共{{item.num}}种商品</text>
+        <text class='zu-stit'>{{item.time}}</text>
+        <text class='zu-pri'>{{item.allprice}}元</text>
+      </view>
+      <view class='zhuangtai {{nowclass[item.zt]}}'>{{nowzt[item.zt]}}</view>
+    </view>
+  </block>
+
+</view>
+
+<view class="bottom">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前选择：{{array[index]}}
+    </view>
+  </picker>
+</view>
+
+<view class="empty_tip " wx:if="{{ddlist==null||ddlist==''}}">
+  <image class='gous' src="{{imgUrl}}dingdanno.png" mode="widthFix"></image>
+  <text class='no-txt'>还没有订单哦</text>
+  <button class='no-but' bindtap='goSC'>到诚信商城逛逛</button>
+</view>

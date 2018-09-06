@@ -1,0 +1,8 @@
+<!--logs.wxml-->
+<view class="container">
+  <text class='tit'>泸州诚信电器</text>
+  <text class='stit'>泸州诚信电器，专注电器家电运营20年，从小家电零售维修到电器商城全类型卖点，开始的鲜为人知到如今广大客户的信赖与支持，20多年的发展离不开诚信电器专注，诚信，精心的服务与良好的售后保障，时至今日，诚信电器线上线下平台同步开售，欢迎新老客户线上提购或点击下方导航到店选购。</text>
+  <text class='fw01'>服务电话：13398276077</text>
+  <text class='fw02'>服务邮箱：632329504@qq.com</text>
+  <button class='goto' bindtap='map'><image src='/pages/images/weizhi.png'></image> 导航前往线下店铺</button>
+</view>

@@ -1,0 +1,102 @@
+/* pages/searchTo/searchTo.wxss */
+.search-bg{
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  height: 60rpx;
+  padding: 15rpx 0 14rpx;
+  background-color:#FE7700;
+}
+.search{
+  width:85%;
+  height:60rpx;
+  background-color:white; 
+  border-radius:10rpx;
+  margin-left:2%;
+  display: flex;
+  flex-direction: row;
+}
+.searchcion{
+  width:5%;
+  float:left;
+  padding: 15rpx 0 0 10rpx;
+  box-sizing: border-box;
+  margin-right:2%;
+}
+#ic-left{
+  margin-left:0;
+}
+.search-inp{
+  width:85%;
+  font-size: 26rpx;
+  float:left;
+  height: 60rpx;
+}
+.inp-hod{
+  color: #C0C0C0;
+}
+.searchNow{
+  width: 10%;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  text-align: center;
+  margin-left:1%;
+  color: white;
+}
+
+.changjian{
+  margin-top: 35rpx;
+}
+.changjian li{
+  display: inline-block;
+  float: left;
+  background-color: #FE7700;
+  color: white;
+  padding: 10rpx 25rpx;
+  border-radius: 10rpx;
+  margin: 0 35rpx;
+  margin-bottom: 35rpx;
+  font-size: 28rpx;
+}
+
+.proList{
+  width: 100%;
+  height: 100%;
+  padding: 0 25rpx;
+  box-sizing: border-box;
+}
+.pro{
+  position:relative;
+  height: 150rpx;
+  padding: 25rpx 0;
+  border-bottom: 1px solid #dcdcdc;
+}
+.pro image{
+  height: 150rpx;
+  width: 150rpx;
+}
+.pro-txt{
+  display: inline-block;
+  width: 75%;
+  margin-left:3%;
+  box-sizing: border-box;
+  height:150rpx;
+  top:25rpx;
+  position:absolute;
+
+}
+.pro-tit{
+  display: block;
+  font-size: 30rpx;
+}
+.pro-stit{
+  display: block;
+  font-size: 20rpx;
+  line-height: 30rpx;
+  color:#b0b0b0;
+  margin-top:6rpx;
+}
+.pro-price{
+  font-size: 30rpx;
+  color:red;
+}

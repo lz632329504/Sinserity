@@ -1,0 +1,103 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="search-bg">
+      <view class="search" bindtap='searchTo'>
+        <icon class="searchcion" id='{{iconStyle}}' size='16' color='#C0C0C0' type='search'></icon>
+        <input class="search-inp" disabled placeholder="搜索商品" placeholder-class="inp-hod"  value=""/>
+        <!--添加bindfocus="fosCome" bindblur="fosBack"属性支持左右移动-->
+      </view>
+    </view>
+
+    <swiper autoplay="true" indicator-dots="true" indicator-color="rgba(255,255,255,.5)" indicator-active-color="rgba(255,255,255,.8)">
+      <swiper-item><image  bindtap="goxq" data-id="{{banner[0][2][1]}}" src='{{indUrl}}{{banner[0][2][0]}}'></image></swiper-item>
+      <swiper-item><image  bindtap="goxq" data-id="{{banner[0][3][1]}}" src='{{indUrl}}{{banner[0][3][0]}}'></image></swiper-item>
+      <swiper-item><image  bindtap="goxq" data-id="{{banner[0][4][1]}}"  src='{{indUrl}}{{banner[0][4][0]}}'></image></swiper-item>
+    </swiper>
+
+    <view class='small-nav'>
+      <ul>
+        <li bindtap="goall" data-id="{{banner[1][2][0]}}" style="padding:15rpx 30rpx;" >
+          <image src='{{indUrl}}{{banner[1][2][1]}}'></image>
+          <view style='margin-left:-30rpx;' class='nav-txt'><text>{{banner[1][2][0]}}</text></view>
+        </li>
+        <li bindtap="goall" data-id="{{banner[1][3][0]}}">
+          <image src='{{indUrl}}{{banner[1][3][1]}}'></image>
+          <view class='nav-txt'><text>{{banner[1][3][0]}}</text></view>
+        </li>
+        <li bindtap="goall" data-id="{{banner[1][4][0]}}">
+          <image src='{{indUrl}}{{banner[1][4][1]}}'></image>
+          <view class='nav-txt'><text>{{banner[1][4][0]}}</text></view>
+        </li>
+        <li bindtap="goall" data-id="{{banner[1][5][0]}}">
+          <image src='{{indUrl}}{{banner[1][5][1]}}'></image>
+          <view class='nav-txt'><text>{{banner[1][5][0]}}</text></view>
+        </li>
+        <li bindtap="goall" data-id="{{banner[1][6][0]}}">
+          <image src='{{indUrl}}{{banner[1][6][1]}}'></image>
+          <view class='nav-txt'><text>{{banner[1][6][0]}}</text></view>
+        </li>
+      </ul>
+    </view>
+
+    <view class='contain-center'>
+      <view class='black-solid'></view>
+      <view class='cen-one'>
+        <image class='big-h' data-id="{{banner[2][2][1]}}" bindtap="goxq" src='{{indUrl}}{{banner[2][2][0]}}' ></image>
+        <view class='big-right'>
+          <image class='right-one' data-id="{{banner[2][3][1]}}" bindtap="goxq" src='{{indUrl}}{{banner[2][3][0]}}'></image>
+          <image class='right-two' data-id="{{banner[2][4][1]}}" bindtap="goxq" src='{{indUrl}}{{banner[2][4][0]}}'></image>
+        </view>
+      </view>
+
+      <block wx:for="{{list}}" wx:key="">
+        <view class='black-solid'></view>
+        <view class='mode'>
+          <view class='mode-h' data-id="{{item[6][1]}}" bindtap="goxq">
+            <text>{{item[1]}}</text>
+            <image class='mode-img-1' src='{{indUrl}}{{item[6][0]}}'></image>
+          </view>
+          <view class='mode-list clearfix'>
+            <ul class="clearfix">
+              <li data-id="{{item[2][1]}}" bindtap="goxq">
+                <image src='{{indUrl}}{{item[2][0]}}'></image>
+                <view class='mode-txt'>
+                  <text class='mode-txt-title'>{{item[2][2]['comname']}}</text>
+                  <text class='mode-txt-stitle'>{{item[2][2]['comsname']}}</text>
+                  <text class='mode-txt-price'>{{item[2][2]['price']}}元起</text>
+                  <text class='mode-txt-noprice'>{{item[2][2]['yuanprice']}}元起</text>
+                </view>
+              </li>
+              <li data-id="{{item[3][1]}}"  bindtap="goxq">
+                <image src='{{indUrl}}{{item[3][0]}}'></image>
+                <view class='mode-txt'>
+                  <text class='mode-txt-title'>{{item[3][2]['comname']}}</text>
+                  <text class='mode-txt-stitle'>{{item[3][2]['comsname']}}</text>
+                  <text class='mode-txt-price'>{{item[3][2]['price']}}元起</text>
+                  <text class='mode-txt-noprice'>{{item[3][2]['yuanprice']}}元起</text>
+                </view>
+              </li>
+              <li data-id="{{item[4][1]}}"  bindtap="goxq">
+                <image src='{{indUrl}}{{item[4][0]}}'></image>
+                <view class='mode-txt'>
+                  <text class='mode-txt-title'>{{item[4][2]['comname']}}</text>
+                  <text class='mode-txt-stitle'>{{item[4][2]['comsname']}}</text>
+                  <text class='mode-txt-price'>{{item[4][2]['price']}}元起</text>
+                  <text class='mode-txt-noprice'>{{item[4][2]['yuanprice']}}元起</text>
+                </view>
+              </li>
+              <li data-id="{{item[5][1]}}"  bindtap="goxq">
+                <image src='{{indUrl}}{{item[5][0]}}'></image>
+                <view class='mode-txt'>
+                  <text class='mode-txt-title'>{{item[5][2]['comname']}}</text>
+                  <text class='mode-txt-stitle'>{{item[5][2]['comsname']}}</text>
+                  <text class='mode-txt-price'>{{item[5][2]['price']}}元起</text>
+                  <text class='mode-txt-noprice'>{{item[5][2]['yuanprice']}}元起</text>
+                </view>
+              </li>
+            </ul>
+          </view>
+        </view>
+      </block>
+
+    </view>
+</view>

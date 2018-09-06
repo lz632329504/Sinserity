@@ -1,0 +1,51 @@
+<!--pages/orderinfo/orderinfo.wxml-->
+<view class='contain'>
+
+  <view class='cen-contain'>
+    <view class='tit'>购物清单</view>
+
+    <block wx:for="{{comlist}}" wx:key="">
+      <view class='cen-txt'>
+        <view class='order-list'>
+          <image src='{{comUrl}}{{item.imgsrc}}'></image>
+          <view class='cen-name'>{{item.comname}}</view>
+          <view class='cen-num'>{{item.num}} × <text class='red-price'>{{item.price}}</text></view>
+        </view>
+      </view>
+    </block>
+
+  </view>
+
+  <view class='cen-contain'>
+    <view class='cen-txt'>
+      <view class='dizhi' bindtap='setdizhi'>
+        <view>收货地址</view>
+        <view><text>{{shdz.telNumber}} {{shdz.userName}} {{pleasexz}}</text></view>
+        <view><text>{{shdz.provinceName}} {{shdz.cityName}} {{shdz.countyName}} {{shdz.detailInfo}}</text></view>
+        <view class='right-icon'>></view>
+      </view>
+    </view>
+  </view>
+
+  <view style='margin-bottom:10rpx;' class='cen-contain'>
+    <view class='order-gong'>
+      <view class='gong-name'>订单金额</view>
+      <view style='color:#767676;' class='cen-num'>应付 <text class='red-price'>{{allprice}}元</text></view>
+    </view>
+    <view style='margin-top:0;' class='cen-txt'>
+      <view class='order-list order-price'>
+        <view class='cen-name'>商品总价</view>
+        <view class='cen-num'><text class='red-price'>{{comallprice}}</text></view>
+      </view>
+      <view class='order-list order-price'>
+        <view class='cen-name'>运费</view>
+        <view class='cen-num'><text class='red-price'>{{yunfei}}元</text></view>
+      </view>
+    </view>
+  </view>
+
+  <view class='pri-bottom'>
+    <button class='fukuan' bindtap='zhifu'>使用微信支付</button>
+  </view>
+
+</view>

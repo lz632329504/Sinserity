@@ -1,0 +1,56 @@
+/* pages/searchTo/searchTo.wxss */
+.bottom{
+  width:100%;
+  height: 60rpx;
+  padding: 15rpx 0 14rpx;
+  background-color:#FE7700;
+  color:white;
+  line-height:60rpx;
+  text-align: center;
+  font-size: 28rpx;
+  position: fixed;
+  bottom: 0;
+  z-index: 999
+}
+.proList{
+  width: 100%;
+  height: 100%;
+  padding: 0 25rpx;
+  box-sizing: border-box;
+}
+.pro{
+  position:relative;
+  height: 150rpx;
+  padding: 25rpx 0;
+  border-bottom: 1px solid #dcdcdc;
+}
+.pro image{
+  height: 150rpx;
+  width: 150rpx;
+}
+.pro-txt{
+  display: inline-block;
+  width: 75%;
+  margin-left:3%;
+  box-sizing: border-box;
+  height:150rpx;
+  top:25rpx;
+  position:absolute;
+
+}
+.pro-tit{
+  display: block;
+  font-size: 24rpx;
+  word-break:break-all;
+}
+.pro-stit{
+  display: block;
+  font-size: 20rpx;
+  line-height: 30rpx;
+  color:#b0b0b0;
+  margin-top:6rpx;
+}
+.pro-price{
+  font-size: 30rpx;
+  color:red;
+}

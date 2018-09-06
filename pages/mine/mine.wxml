@@ -1,0 +1,29 @@
+<!--pages/mine/mine.wxml-->
+<view class='contain'>
+  <view class='my-info'>
+    <open-data class="touxiang" type="userAvatarUrl"></open-data>
+    <open-data class="user-name" type="userNickName"></open-data>
+    <!-- 需要使用 button 来授权登录 -->
+    <!--<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+    <view wx:else>请升级微信版本</view>-->
+  </view>
+  <view class="my-dd" bindtap='myOrder'>
+    <image src='{{imgUrl}}dingdan.png'></image>
+    <text>我的订单</text>
+  </view>
+  <view style='margin-top:10rpx;' class="my-dd" bindtap='shouhuo'>
+    <image src='{{imgUrl}}shouhuodizhi.png'></image>
+    <text>收货地址管理</text>
+  </view>
+  <view class="my-dd" bindtap='golog'>
+    <image src='{{imgUrl}}guanyuwomen.png'></image>
+    <text>诚信电器</text>
+  </view>
+  <navigator url="../kuaidi/kuaidi">
+    Go to pages/hello-page!
+  </navigator>
+  <view class="boddom">
+    <text>@技术支持@</text>
+    <text>超低价小程序开发请联系微信:what0106</text>
+  </view>
+</view>

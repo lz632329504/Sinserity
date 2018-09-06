@@ -1,0 +1,34 @@
+<!--pages/searchTo/searchTo.wxml-->
+<view class="container">
+    <view class="search-bg">
+      <view class="search">
+        <icon class="searchcion" id='ic-left' size='16' color='#C0C0C0' type='search'></icon>
+        <input class="search-inp" placeholder="搜索商品" placeholder-class="inp-hod" focus="{{name_focus}}"  bindblur="fosBack" value="{{inpVal}}" bindinput='input2input' bindconfirm="starSearch"/>
+        <icon class="searchcion" id='ic-left' bindtap='inpVno' size='16' color='#C0C0C0' type='clear'></icon>
+      </view>
+      <text class='searchNow' bindtap='starSearch'>搜索</text>
+    </view>
+
+    <view class='proList'>
+      <block wx:for="{{searresult}}" wx:key="">
+        <view class='pro' wx:if="{{item!='null'}}" data-id='{{item.id}}' bindtap='goxq'>
+          <image src='{{comUrl}}{{item.imgsrc}}'></image>
+          <view class='pro-txt'>
+            <text class='pro-tit'>{{item.comname}}</text>
+            <text class='pro-stit'>{{item.comsname}}</text>
+            <text class='pro-price'>{{item.price}}</text>
+          </view>
+        </view>
+      </block>
+      <view wx:if="{{searresult==null}}" style='margin-top:40rpx;text-align:center;font-size:30rpx;'>
+        当前查询无匹配商品
+        <view class='changjian'>
+          <ul>
+            <block wx:for="{{addxci}}" bindtap="addci" wx:key="">
+              <li data-id="{{item}}" bindtap="addci">{{item}}</li>
+            </block>
+          </ul>
+        </view>
+      </view>
+    </view>
+</view>

@@ -1,0 +1,26 @@
+<!--pages/searchTo/searchTo.wxml-->
+<view class="container">
+    <view class="bottom">
+      <picker mode="multiSelector" bindchange="bindMultiPickerChange"  value="{{multiIndex}}" range="{{multiArray}}">
+        <view class="picker">
+          当前筛选：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+        </view>
+      </picker>
+    </view>
+
+    <view class='proList'>
+      <block wx:for="{{searresult}}" wx:key="">
+        <view class='pro' wx:if="{{item!='null'}}" data-id='{{item.id}}' bindtap='goxq'>
+          <image src='{{comUrl}}{{item.imgsrc}}'></image>
+          <view class='pro-txt'>
+            <text class='pro-tit'>{{item.comname}}</text>
+            <text class='pro-stit'>{{item.comsname}}</text>
+            <text class='pro-price'>{{item.price}}元</text>
+          </view>
+        </view>
+      </block>
+      <view wx:if="{{searresult==null}}">
+        <view>暂无数据！</view>
+      </view>
+    </view>
+</view>

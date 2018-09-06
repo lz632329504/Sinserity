@@ -1,0 +1,40 @@
+<!--pages/category/category.wxml-->
+<view class='contain'>
+  <view class='cate-list'>
+    <ul>
+      <block wx:for="{{bigCate}}" wx:key="">
+        <li data-id="d{{index+1}}" class="{{isfocu=='d'+(index+1)?'active':''}}" bindtap="oncli">{{item['cName']}}</li>
+      </block>
+      <!--<li data-id="d1" bindtap="oncli" class="{{isfocu=='d1'?'active':''}}">{{bigCate[0]}}</li>
+      <li data-id="d2" bindtap="oncli" class="{{isfocu=='d2'?'active':''}}">{{bigCate[1]}}</li>
+      <li data-id="d3" bindtap="oncli" class="{{isfocu=='d3'?'active':''}}">{{bigCate[2]}}</li>
+      <li data-id="d4" bindtap="oncli" class="{{isfocu=='d4'?'active':''}}">{{bigCate[3]}}</li>-->
+    </ul>
+  </view>
+ 
+  <view class='s-contain' style='height:100%' animation="{{animationData}}">
+    <scroll-view style='height:{{resHeight}}px' scroll-y="1" scroll-into-view="{{isfocu}}" scroll-with-animation="true" bindscroll="scrollTing">
+
+      <block wx:for="{{bigCate}}" wx:for-item="catename" wx:key="">
+        <view class='smabla' id='d{{index+1}}'>
+        <text class='h5'>—  <text class='sma-title'>{{catename['cName']}}</text>  —</text>
+        <ul>
+          <block wx:for="{{comlist}}" wx:for-index="num" wx:key="">
+            <!--<li>
+              <image src='{{imgUrl}}kongtiao.png'></image>
+              海尔
+            </li>-->
+            <li wx:if="{{item[2]==catename['id']}}" data-id="{{item[3]}}" bindtap="goxq">
+              <image src='{{comUrl}}{{item[0]}}'></image>
+              <!--{{item[1]}}-->
+            </li>
+          </block>
+        </ul>
+        </view>
+      </block>
+
+    </scroll-view>
+
+  </view>
+ 
+</view>

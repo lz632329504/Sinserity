@@ -1,0 +1,66 @@
+/* pages/mine/mine.wxss */
+.contain{
+  background-color: #e9e9e9;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.my-info{
+  width: 100%;
+  height: 150rpx;
+  background-color:white;
+  margin-top:20rpx;
+  display: flex;
+  flex-direction: row;
+}
+.touxiang{
+  width: 110rpx;
+  height: 110rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.user-name{
+  display: inline-block;
+  line-height: 150rpx;
+  vertical-align: middle;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+.my-dd{
+  width: 100%;
+  height:60rpx;
+  background-color: white;
+  margin-top:20rpx;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.my-dd image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+}
+
+.my-dd text{
+  display: inline-block;
+  line-height: 60rpx;
+  vertical-align: middle;
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}
+
+.boddom{
+  position: fixed;
+  bottom: 10rpx;
+  line-height: 35rpx;
+  width: 100%;
+  font-size: 25rpx;
+  text-align: center;
+  color: #767676;
+}
+.boddom text{
+  display: block;
+}

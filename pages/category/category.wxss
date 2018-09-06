@@ -1,0 +1,56 @@
+/* pages/category/category.wxss */
+page{
+  height: 100%;
+}
+.cate-list{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100%;
+  border-right: 1px solid #e0e0e0;
+}
+.cate-list li{
+  display: block;
+  text-align: center;
+  font-size: 29rpx;
+  line-height: 85rpx;
+}
+.cate-list .active{
+  color: #FE7700;
+  font-size:32rpx;
+}
+.s-contain{
+  width: 80%;
+  margin-left:20%;
+}
+.smabla{
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  padding: 40rpx 40rpx;
+  clear: both
+}
+.h5{
+  color:#e0e0e0;
+  font-size: 30rpx;
+  display: block;
+  margin:10rpx 0;
+}
+.sma-title{
+  color:black;
+}
+.smabla li{
+  font-size: 25rpx;
+  width: 33.3%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  margin:20rpx 0;
+}
+.smabla image{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 auto 15rpx;
+}

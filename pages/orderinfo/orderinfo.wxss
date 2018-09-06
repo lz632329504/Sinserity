@@ -1,0 +1,144 @@
+/* pages/orderinfo/orderinfo.wxss */
+.contain{
+  background-color: #e9e9e9;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.title{
+  width: 100%;
+  height: 120rpx;
+  background-color: #FE7700;
+  color: white;
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
+}
+.tie,stit{
+  display: block;
+}
+.tie{
+  font-size: 30rpx;
+}
+.stie{
+  font-size: 20rpx;
+  margin-top: 10rpx;
+}
+.cen-contain{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.cen-contain .tit{
+  font-size: 22rpx;
+  color:#767676;
+  box-sizing: border-box;
+  margin-left: 20rpx;
+}
+.cen-txt{
+  margin-top: 10rpx;
+  padding:0 20rpx;
+  background-color: white;
+}
+.cen-txt>view,.cen-txt .order-list{
+  display: block;
+  border-bottom: 1px solid #e7e7e7;
+  font-size: 28rpx;
+  padding:15rpx 0;
+  color:#767676;
+}
+.cen-txt>view:last-child,.cen-txt order-list:last-child{
+  border:none;
+}
+.cen-txt .dizhi view{
+  display: block;
+  line-height: 50rpx;
+}
+.cen-txt text{
+  color:black;
+}
+.order-list{
+  box-sizing: border-box;
+  height: 100rpx;
+}
+.order-list image{
+  width: 60rpx;
+  height: 60rpx;
+  float: left;
+} 
+.cen-txt .cen-name{
+  float: left;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  margin-left: 15rpx;
+  color:black;
+}
+.order-name .cen-name{
+  float: left;
+  line-height: 35rpx;
+  font-size: 23rpx;
+  width: 65%;
+  margin-left: 15rpx;
+  color:black;
+}
+.cen-num{
+  display: inline-block;
+  float: right;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+.cen-num .red-price{color: red;}
+
+.order-gong{
+  background-color: white;
+  font-size: 33rpx;
+  height: 100rpx;
+  border-bottom: 1px solid #e7e7e7;
+  margin-top: 10rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.gong-name{
+  float: left;
+  line-height: 60rpx;
+}
+.pri-bottom{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+}
+.quxiao{
+  width: 50%;
+  background-color: #dfdfdf;
+  float: left;
+  border-radius: 0;
+  height: 100rpx;
+  color: white;
+  border: none;
+}
+.fukuan{
+  width: 50%;
+  background-color: #47c725;
+  border-radius: 0;
+  height: 100rpx;
+  color: white;
+  border: none;
+}
+.quanbu{
+  width: 100%;
+  background-color: #FE7700;
+  border-radius: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: white;
+  border: none;
+}
+.yukuai{
+  width: 100%;
+  background-color:#47c725;
+  border-radius: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: white;
+  border: none;
+}

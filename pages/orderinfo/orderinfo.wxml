@@ -1,0 +1,86 @@
+<!--pages/orderinfo/orderinfo.wxml-->
+<view class='contain'>
+  <view class='title'>
+    <view class='tie'>{{nowzt[ddlist.zt]}}</view>
+    <view class='stie'>{{nowtxt[ddlist.zt]}}</view>
+  </view>
+  <view class='cen-contain'>
+    <view class='tit'>订单信息</view>
+    <view class='cen-txt'>
+      <view>下单日期 : <text>{{ddlist.time}}</text></view>
+      <view>订单编号 : <text>{{ddlist.bianhao}}</text></view>
+      <view wx:if="{{ddlist.yestime!=null}}">交易完成日期 : <text>{{ddlist.yestime}}</text></view>
+      <view class='dizhi'>
+        <view>收货地址</view>
+        <view><text>{{ddlist.phone}} {{ddlist.name}} 收</text></view>
+        <view><text>{{ddlist.address}}</text></view>
+      </view>
+    </view>
+  </view>
+
+  <view class='cen-contain'>
+    <view class='tit'>购物清单</view>
+    <block wx:for="{{ddlist.imgsrc}}" wx:key="">
+      <view class='cen-txt'>
+        <view class='order-list order-name'>
+          <image src='{{comUrl}}{{item}}'></image>
+          <view class='cen-name'>{{ddlist.comname[index]}} {{ddlist.yanse[index]}}</view>
+          <view class='cen-num'>{{ddlist.num[index]}} × <text class='red-price'>{{ddlist.price[index]}}元</text></view>
+        </view>
+      </view>
+    </block>
+
+  </view>
+
+  <view style='margin-bottom:110rpx;' class='cen-contain'>
+    <view class='tit'>订单金额</view>
+    <view class='order-gong'>
+      <view class='gong-name'>订单金额</view>
+      <view style='color:#767676;' class='cen-num'>应付 <text class='red-price'>{{comallprice}}元</text></view>
+    </view>
+    <view style='margin-top:0;' class='cen-txt'>
+      <view class='order-list'>
+        <view class='cen-name'>商品总价</view>
+        <view class='cen-num'><text class='red-price'>{{ddlist.allprice}}元</text></view>
+      </view>
+      <view class='order-list'>
+        <view class='cen-name'>运费</view>
+        <view class='cen-num'><text class='red-price'>10元</text></view>
+      </view>
+    </view>
+  </view>
+
+  <view class='pri-bottom' wx:if="{{ddlist.zt=='0'}}">
+    <button class='quxiao' bindtap='deletedd'>取消订单</button>
+    <button class='fukuan' bindtap='wxzhifu'>使用微信支付</button>
+  </view>
+
+  <view class='pri-bottom' wx:if="{{ddlist.zt=='1'||ddlist.zt=='2'}}">
+    <button class='yukuai' bindtap='ysedingdan'>确认收货</button>
+  </view>
+
+  <view class='pri-bottom' wx:if="{{ddlist.zt=='3'}}">
+    <button class='yukuai'>申请售后</button>
+  </view>
+
+  <view class='pri-bottom' wx:if="{{ddlist.zt=='4'}}">
+    <button class='yukuai'>售后处理中</button>
+  </view>
+
+  <view class='pri-bottom' wx:if="{{ddlist.zt=='5'}}">
+    <button class='yukuai'>退货中</button>
+  </view>
+
+  <view class='pri-bottom' wx:if="{{ddlist.zt=='6'}}">
+    <button class='yukuai'>退款中</button>
+  </view>
+
+  <view class='pri-bottom' wx:if="{{ddlist.zt=='7'}}">
+    <button class='yukuai'>换货确认收货</button>
+  </view>
+
+  <view class='pri-bottom' wx:if="{{ddlist.zt=='8'}}">
+    <button class='yukuai'>售后处理完成</button>
+  </view>
+
+</view>

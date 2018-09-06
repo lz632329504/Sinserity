@@ -1,0 +1,49 @@
+<!--pages/comdet/comdet.wxml-->
+<view class='contain'>
+  <swiper autoplay="true" indicator-dots="true" indicator-color="rgba(255,255,255,.5)" indicator-active-color="rgba(255,255,255,.8)">
+      <block wx:for="{{comxq.imgsrc}}" wx:key="">
+        <swiper-item><image src='{{comUrl}}{{item}}'></image></swiper-item>
+      </block>
+  </swiper>
+
+  <view class='con-txt'>
+    <view class='title'>{{comxq.comname}}</view>
+    <view class='stitle'>{{comxq.comsname}}</view>
+    <view class='price'>{{comprice}}元</view>
+    <view class='yprice'>{{comyprice}}元</view>
+  </view>
+
+  <view style='width:100%;height:10rpx;background-color:#e7e7e7;'></view>
+
+  <view class='canshu'>
+    <view class='canshu-top'>
+        <!--<view class='canshu-one' bindtap='choosbanben' wx:if="{{comxq.banben!=null}}">版本   <text>{{chosBb!=null?chosBb:"请选择版本"}}</text></view>-->
+        <view class='canshu-one' bindtap='chooscolor' wx:if="{{comxq.yanse!=null}}">参数   <text>{{chosYs!=""?chosYs:"请选择参数"}}</text></view>
+        <view class='canshu-one' bindtap='choosnumbei'>数量   <text>{{chosSl}}</text></view>
+        <view class='canshu-two'>
+          <block wx:for="{{comxq.serve}}" wx:key="">
+            <icon type="success" size="10" color="orange"/><text>{{item}}</text>
+          </block>
+        </view>
+    </view>
+  </view>
+
+  <view style='width:100%;height:10rpx;background-color:#e7e7e7;'></view>
+
+  <view class='gaishu'>
+    <view>概述</view>
+  </view>
+  <view class='xiangqingye'>
+    <block wx:for="{{comxq.xiangqingye}}" wx:key="">
+        <image src='{{comUrl}}{{item}}' mode="widthFix"></image>
+    </block>
+  </view>
+
+  <view style='width:100%;height:10rpx;margin-bottom:80rpx;background-color:#e7e7e7;'></view>
+
+</view>
+<view class='bottom'>
+  <view class='gouwuche' bindtap='clickgogwc'><image src='{{imgUrl}}gouwuche.png' mode="widthFix"></image></view>
+  <view class='jiaru' bindtap='gogwc'>加入购物车</view>
+  <view class='goumai' bindtap='gotoDd'>立即购买</view>
+</view>

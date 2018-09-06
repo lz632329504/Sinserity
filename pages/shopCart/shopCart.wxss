@@ -1,0 +1,115 @@
+/* pages/shopCart/shopCart.wxss */
+
+.empty_tip .gous{
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 180rpx;
+}
+.empty_tip .no-txt{
+  font-size: 38rpx;
+  margin:60rpx 0;
+}
+.empty_tip .no-but{
+  width: 70%;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 38rpx;
+  border-radius: 10rpx;
+  background-color: #FE7700;
+  color:white;
+}
+.empty_tip{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;/*水平居中*/
+  background-color: #e7e7e7;
+  padding-bottom: 100rpxx;
+}
+
+.guclist{
+  position:relative;
+  padding: 20rpx;
+  background-color: white;
+  margin-top: 10rpx;
+  height:120rpx;
+  width:100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bord{
+  border:1px solid #e7e7e7;
+  border-radius: 25rpx;
+  height: 47rpx;
+  width: 47rpx;
+  float: left;
+}
+
+.zt{
+  width: 80rpx;
+  height: 80rpx;
+  float: left;
+  margin-left: 30rpx;
+}
+.title{
+  font-size: 20rpx;
+  width: 55%;
+  margin-left: 30rpx;
+  float: left;
+  vertical-align:middle;
+  display:table-cell;
+  word-break:break-all;
+}
+.nowright{
+  position: absolute;
+  right: 20rpx;
+  font-size: 28rpx;
+  float: right;
+}
+.bottm{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100rpx;
+  width: 100%;
+  background-color: white;
+}
+.bottom-txt{
+  font-size: 28rpx;
+  margin-left:20rpx;
+  color: #767676;
+  float: left;
+}
+.hecheng{
+  height: 100rpx;
+  width: 25%;
+  float: right;
+  color: white;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 100rpx;
+  position: absolute;
+  right: 0;
+}
+.hui{
+  background-color: #767676;
+}
+.ju{
+  background-color: #FE7700;
+}
+.nowright2{
+  font-size: 28rpx;
+  float: right;
+  position: absolute;
+  right: 27%;
+}
