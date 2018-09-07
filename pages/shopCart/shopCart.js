@@ -28,13 +28,13 @@ Page({
     wx.showLoading({
       title: "加载中",
     })
+    //console.log(wx.getStorageSync('user').openid);
     wx.request({
       url: that.data.host + 'small/sear.php?act=seargwc&opid=' + wx.getStorageSync('user').openid,
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        console.log(res.data);
         that.setData({
           list: res.data
         })

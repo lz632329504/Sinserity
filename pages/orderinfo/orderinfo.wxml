@@ -83,4 +83,6 @@
     <button class='yukuai'>售后处理完成</button>
   </view>
 
+  <view wx:if="{{iszf==true}}" class='closenow'>支付暂未开通，电话订购请联系13398276077送货上门</view>
+
 </view>

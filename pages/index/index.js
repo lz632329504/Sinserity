@@ -54,7 +54,7 @@ Page({
       url: getApp().globalData.host + 'small/sear.php?act=getbanner',
       success: function (res) {
         var list=[];
-        console.log(res.data);
+        //console.log(res.data);
         for(var i=3;i<res.data.length;i++){
           list[i-3] = res.data[i]
         }
@@ -62,7 +62,7 @@ Page({
           banner: res.data,
           list:list
         })
-        console.log(res.data);
+        //console.log(that.data.list);
       },
       complete: function () {
         // complete
@@ -90,7 +90,7 @@ Page({
     var num = parseInt(Math.random() * 3 + 1);
     return {
       title: "你家隔壁的电器商城太便宜了",
-      path: '/pages/comdet/comdet?id=' + that.data.comid,
+      path: '/pages/index/index',
       imageUrl: that.data.imgUrl + 'zf' + num + '.jpg'
     }
   }

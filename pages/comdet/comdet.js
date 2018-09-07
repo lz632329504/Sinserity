@@ -34,7 +34,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        console.log(res.data);
+        //console.log(res.data);
         that.setData({
           comxq: res.data,
           comprice:res.data.price[0],
@@ -122,7 +122,7 @@ Page({
     wx.showActionSheet({
       itemList: that.data.comxq.yanse,
       success: function (res) {
-        console.log(res.tapIndex);
+        //console.log(res.tapIndex);
         that.setData({
           chosYs: that.data.comxq.yanse[res.tapIndex],
           comprice: that.data.comxq.price[res.tapIndex],

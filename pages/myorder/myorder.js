@@ -44,11 +44,10 @@ Page({
     if (that.data.index!=0){
       searzt = that.data.index-1;
     }
-    console.log(wx.getStorageSync('user').openid);
     wx.request({
       url: getApp().globalData.host + 'small/sear.php?act=seardd&opid=' + wx.getStorageSync('user').openid + "&searzt=" + searzt,
       success: function (res) {
-        console.log(res.data);
+        //console.log(res.data);
         that.setData({
           ddlist: res.data
         })

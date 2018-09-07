@@ -1,6 +1,6 @@
 {
   "pages":[
-        "pages/index/index",
+    "pages/index/index",
     "pages/shopCart/shopCart",
     "pages/myorder/myorder",
     "pages/orderinfo/orderinfo",
@@ -11,8 +11,7 @@
     "pages/category/category",
     "pages/comdet/comdet",
     "pages/mine/mine",
-    "pages/shouquan/shouquan",
-    "pages/kuaidi/kuaidi"
+    "pages/shouquan/shouquan"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -52,14 +51,5 @@
         "selectedIconPath": "pages/images/wode-1.png"
       }
     ]
-  },
-  "plugins": {
-    "kuaidi": {
-      "version": "1.0.0",
-      "provider": "wx98f132d54062cc3e"
-    }
-  },
-  "usingComponents": {
-    "hello-component": "plugin://kuaidi/kuaidi"
   }
 }

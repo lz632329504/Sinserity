@@ -27,8 +27,6 @@ Page({
         }
       }
     })*/
-    var myPluginInterface = requirePlugin('kuaidi');
-    console.log(myPluginInterface.getOrderSn);
   },
   bindGetUserInfo: function (e) {
     console.log(e.detail.userInfo)

@@ -25,6 +25,7 @@ Page({
       "3": "订单已完成交易，祝您购物愉快",
       "4": "售后处理中，请等待商家回应"
     },
+    iszf:false
   },
 
   /**
@@ -32,7 +33,7 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-    console.log(options.id)
+    //console.log(options.id)
     wx.request({
       url: getApp().globalData.host + 'small/sear.php?act=ddsear&id='+options.id,
       success: function (res) {
@@ -53,8 +54,12 @@ Page({
   },
   //微信支付
   wxzhifu:function(){
-    console.log("dianji");
-    wx.requestPayment({
+    //console.log("dianji");
+    var that = this;
+    that.setData({
+      iszf:true
+    })
+    /*wx.requestPayment({
       'timeStamp': '2548524',
       'nonceStr': 'fdfa2f6adfdsafdaf',
       'package': 'vdfdsdfsdfdse',
@@ -66,7 +71,7 @@ Page({
       'fail': function (res) {
         console.log("f" + res)
       }
-    })
+    })*/
   },
   //删除订单
   deletedd:function(){

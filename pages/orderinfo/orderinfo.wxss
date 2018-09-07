@@ -142,3 +142,22 @@
   color: white;
   border: none;
 }
+
+
+.closenow{
+  width: 500rpx;
+  height:auto;
+  position: fixed;
+  top: 500rpx;
+  left: 50%;
+  margin-left: -250rpx;
+  background-color: #FE7700;
+  border-radius: 24rpx;
+  line-height: 40rpx;
+  color:white;
+  font-size: 26rpx;
+  text-align: center;
+  padding:15rpx;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 4px #dfdfdf;
+}

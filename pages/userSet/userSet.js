@@ -21,7 +21,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.id);
+    //console.log(options.id);
     this.setData({
       comlist: JSON.parse(options.id)
     })
@@ -80,6 +80,7 @@ Page({
   //支付
   zhifu:function(){
     var that = this;
+    //判断是否填写收货地址
     if (that.data.shdz==null){
       wx.showToast({
         title: '请选择收货地址',
@@ -88,6 +89,13 @@ Page({
       })
       return false;
     }
+    //支付区域
+    wx.showToast({
+      title: '支付失败',
+      image: "/pages/images/fail.png",
+      duration: 2000
+    })
+    //录入数据加入订单数据库
     var comlist = that.data.comlist;
     var shdz = that.data.shdz;
     var imgsrc = "";
@@ -138,7 +146,7 @@ Page({
             url: '/pages/orderinfo/orderinfo?id='+res.data
           })
         }
-        console.log(res.data)
+        //console.log(res.data)
       },
       fail: function (e) {
         console.log(e)

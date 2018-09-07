@@ -19,9 +19,6 @@
     <image src='{{imgUrl}}guanyuwomen.png'></image>
     <text>诚信电器</text>
   </view>
-  <navigator url="../kuaidi/kuaidi">
-    Go to pages/hello-page!
-  </navigator>
   <view class="boddom">
     <text>@技术支持@</text>
     <text>超低价小程序开发请联系微信:what0106</text>
